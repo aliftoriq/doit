@@ -83,6 +83,17 @@
         app:layout_constraintEnd_toEndOf="@+id/menubg"
         app:srcCompat="@drawable/people_off" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="my task"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/bt_add_task"
         android:layout_width="wrap_content"

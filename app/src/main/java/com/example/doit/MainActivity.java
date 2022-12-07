@@ -8,7 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private Button buttonDashboard;
 
@@ -18,10 +18,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide();
-
-//        buttonDashboard = (Button) findViewById(R.id.startmenu);
-
-//        buttonDashboard.setOnClickListener(this);
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -33,9 +29,4 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }, 2000L);
     }
 
-    @Override
-    public void onClick(View view) {
-//        if (view == buttonDashboard)
-//            startActivity(new Intent(this, Dasboard.class));
-    }
 }

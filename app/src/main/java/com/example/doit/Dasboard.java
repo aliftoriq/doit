@@ -1,6 +1,7 @@
 package com.example.doit;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -89,11 +90,12 @@ public class Dasboard extends AppCompatActivity implements View.OnClickListener{
                             }
 
                         }
-                        t1.setText(taskList.get(1).getTask());
-                        d1.setText(taskList.get(1).getDate());
+                        Collections.reverse(taskList);
+                        t1.setText(taskList.get(0).getTask());
+                        d1.setText(taskList.get(0).getDate());
                         if(jsonArray.getJSONObject(0).length() > 1){
-                            t2.setText(taskList.get(2).getTask());
-                            d2.setText(taskList.get(2).getDate());
+                            t2.setText(taskList.get(1).getTask());
+                            d2.setText(taskList.get(1).getDate());
                         }
 
                     }catch (JSONException e){
@@ -104,7 +106,6 @@ public class Dasboard extends AppCompatActivity implements View.OnClickListener{
                     Toast.makeText(getApplicationContext(), "Failed to get data", Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override
